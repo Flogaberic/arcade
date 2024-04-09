@@ -1,0 +1,4 @@
+# Définition du déclencheur pour la branche principale
+branches:
+  only:
+    - master

@@ -1,0 +1,4 @@
+# Configuration du déclencheur pour la branche principale
+trigger:
+  include:
+    - local: '.gitlab/ci/triggers/main_branch.yml'
