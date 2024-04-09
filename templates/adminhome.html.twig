@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Admin-Home | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<h1>Accès admin</h1>
+
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Jeux</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
+    </li>
+</ul>
+
+{% endblock %}

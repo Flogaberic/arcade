@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Animation | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<a href="{{ path('accueil')}}"><video autoplay muted loop>
+    <source src="vid/Composition_1.mp4" type="video/mp4" width="1230px" height="720px">
+</video></a>
+
+{% endblock %}
