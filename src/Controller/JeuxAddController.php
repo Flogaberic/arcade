@@ -39,6 +39,12 @@ class JeuxAddController extends AbstractController
         $manager->persist($jeu);
         $manager->flush();
 
+        return $this->redirectToRoute('jeux.liste');
+    }
+
+    #[Route('/jeux-add-form', name: 'jeux.add.form')]
+    public function afficherFormulaireAjoutJeu(): Response
+    {
         return $this->render('jeuxadd.html.twig');
     }
 }

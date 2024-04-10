@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Paramètres | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<div class="parametres_box">
+    <h1>Paramètres</h1>
+    <div class="d-flex">
+        <div style="flex: 1">
+            <img src="img/sons2.png" width="30px" height="30px"><button>Couper le son</button><br>
+            <img src="img/sons1.png" width="30px" height="30px"><button>Activer le son</button><br>
+            <img src="img/coupe.png" width="30px" height="30px"><button>Trophées</button><br>
+            <img src="img/$.png" width="30px" height="30px"><button>Argent</button>
+        </div>
+        <div style="flex: 1"> 
+            <img src="img/musique1.png" width="30px" height="30px"><button>Couper la musique</button><br>
+            <img src="img/musique2.png" width="30px" height="30px"><button>Activer la musique</button><br>
+            <img src="img/Aide.png" width="30px" height="30px"><button>Aide</button>
+        </div>
+    </div>
+</div>
+<a href="{{ path('accueil') }}"><button>Quitter</button></a>
+{% endblock %}
