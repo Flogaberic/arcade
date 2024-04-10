@@ -22,3 +22,42 @@ body{
 ul li{
     justify-content: space-between;
 }
+
+.conteneur {
+    position: relative;
+}
+
+
+.element2 {
+position: absolute;
+top: 20px;
+left: 30%;
+width: 100px;
+height: 100px;
+}
+
+.element3 {
+position: absolute;
+top: 2rem;
+left: 10rem;
+width: 100px;
+height: 100px;
+}
+
+.jeux{
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+
+}
+
+.jeu{
+    border: 6px solid #481B71;
+    border-radius: 15px;
+}
+
+.categorie{
+    position: absolute;
+    top: 27rem;
+    left: 32rem;
+}

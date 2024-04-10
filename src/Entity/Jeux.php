@@ -39,7 +39,7 @@ class Jeux
         return $this->Nom;
     }
 
-    public function setNom(string $Nom): static
+    public function setNom($Nom): static
     {
         $this->Nom = $Nom;
 
@@ -51,7 +51,7 @@ class Jeux
         return $this->Img;
     }
 
-    public function setImg(string $Img): static
+    public function setImg($Img): static
     {
         $this->Img = $Img;
 
@@ -63,7 +63,7 @@ class Jeux
         return $this->Categorie;
     }
 
-    public function setCategorie(string $Categorie): static
+    public function setCategorie($Categorie): static
     {
         $this->Categorie = $Categorie;
 
@@ -75,7 +75,7 @@ class Jeux
         return $this->Chemin;
     }
 
-    public function setChemin(string $Chemin): static
+    public function setChemin($Chemin): static
     {
         $this->Chemin = $Chemin;
 
