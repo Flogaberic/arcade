@@ -1,10 +1,14 @@
 {% extends "base.html.twig" %}
 
-{% block title %} Glad'N'Slash | {{ parent() }} {% endblock %}
+{% block title %} {{ nom }} | {{ parent() }} {% endblock %}
 
 {% block body %}
 
-<a href="https://n59fjp.csb.app" class=""><button class="btn btn-primary">Jouer</button></a>
+<h1>{{ nom }}</h1>
+<h5>{{ categorie }}</h5>
+<h5>{{ highscore }}</h5>
+<img src="{{ img }}" width="500px"><br>
+<a href="{{ chemin }}"><button class="btn btn-primary">Jouer</button></a>
 
 {% endblock %}
 
