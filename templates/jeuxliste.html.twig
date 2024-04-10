@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Liste des jeux | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<h1>Liste des jeux</h1>
+
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Jeux</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
+    </li>
+</ul>
+
+<ul>
+    {% for item in jeux %}
+        <li>{{ item.getId() }}</li>
+        <li>{{ item.getNom() }}</li>
+        <li>{{ item.getImg() }}</li>
+        <li>{{ item.getCategorie() }}</li>
+        <li>{{ item.getChemin() }}</li>
+        <li>{{ item.getHighscore() }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ path('jeux.add') }}"><button class="btn btn-primary">Ajouter</button></a>
+
+{% endblock %}

@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+# Remplacer par le nom du jeu
 class GladnslashController extends AbstractController
 {
     private $entityManager;
@@ -18,6 +19,7 @@ class GladnslashController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
+    # Remplacer par le nom du jeu
     #[Route('/gladnslash', name: 'gladnslash', methods: ['GET', 'POST'])]
     public function index(): Response
     {

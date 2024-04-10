@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Ajouter un jeu | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<h1>Ajouter un jeu</h1>
+
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{{ path('jeux.liste') }}">Jeux</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
+    </li>
+</ul>
+
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Image</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Catégorie</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Chemin</label>
+        <input type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+
+{% endblock %}
