@@ -74,7 +74,7 @@ height: 100px;
 .parametres_box{
     display: block;
     border: 6px solid #481B71;
-    background: linear-gradient(to right, orange, pink);
+    background: linear-gradient(to bottom, #E71E7B, #F6A019);
     width: 600px;
     border-radius: 20px;
     margin: auto;

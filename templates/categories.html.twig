@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Catégories | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<div class="element1">
+    <video autoplay muted loop>
+        <source src="vid/ANIM_CATEGORIES.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="parametres_box">
+    <h1>Catégories</h1>
+    <div>
+        <h5>Couper le son</h5><br>
+        <h5>Activer le son</h5><br>
+        <h5>Trophées</h5><br>
+        <h5>Argent</h5>
+    </div>
+</div>
+<a href="{{ path('accueil') }}"><button>Quitter</button></a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %} {{ nom }} | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<video autoplay muted loop>
+    <source src="vid/PACMAN_ANIM_JEU.mp4" type="video/mp4">
+</video>
+
+<h1>{{ nom }}</h1>
+<h5>{{ categorie }}</h5>
+<h5>{{ highscore }}</h5>
+<img src="{{ img }}" width="500px"><br>
+<a href="{{ chemin }}"><button class="btn btn-primary">Jouer</button></a>
+
+{% endblock %}

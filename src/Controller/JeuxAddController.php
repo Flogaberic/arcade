@@ -58,8 +58,28 @@ class JeuxAddController extends AbstractController
         return $this->render('jeuxadd.html.twig');
     }
 
+    #[Route('/jeux-supp-action', name: 'jeux.supp.action', methods: ['GET', 'POST'])]
+    public function supp(
+        Request $request,
+        EntityManagerInterface $manager
+        ): Response
+    {
+        $id = $request->request->get('id');
+
+        $jeu = $manager->getRepository(Jeux::class)->find($id);
+
+        if (!$jeu) {
+            throw $this->createNotFoundException('Jeu non trouvé');
+        }
+
+        $manager->remove($jeu);
+        $manager->flush();
+
+        return $this->redirectToRoute('jeux.liste');
+    }
+
     #[Route('/jeux-supp', name: 'jeux.supp', methods: ['GET', 'POST'])]
-    public function supp(): Response
+    public function suppform(): Response
     {
         return $this->render('jeuxsupp.html.twig');
     }
