@@ -6,12 +6,15 @@
 
 <h1>Liste des jeux</h1>
 
-<ul class="nav justify-content-center">
+<ul class="nav nav-pills nav-justified">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Jeux</a>
+      <a class="nav-link active" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
+      <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('jeux.supp') }}">Supprimer</a>
     </li>
 </ul>
 
@@ -26,7 +29,6 @@
     {% endfor %}
 </ul>
 
-<a href="{{ path('jeux.add.form') }}"><button class="btn btn-primary">Ajouter</button></a>
-<a href="{{ path('jeux.supp') }}"><button class="btn btn-primary">Supprimer</button></a>
+<a href="{{ path('admin.home') }}"><button class="btn btn-primary">Quitter</button></a>
 
 {% endblock %}

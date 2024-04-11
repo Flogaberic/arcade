@@ -6,13 +6,15 @@
 
 <h1>Accès admin</h1>
 
-<ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{{ path('jeux.liste') }}">Jeux</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
-    </li>
+<ul class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Jeux</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ path('admin.users') }}">Utilisateurs</a>
+  </li>
 </ul>
+
+<a href="{{ path('security.logout') }}"><button class="btn btn-primary">Déconnexion</button></a>
 
 {% endblock %}

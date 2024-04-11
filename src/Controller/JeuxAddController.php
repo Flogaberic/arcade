@@ -19,8 +19,18 @@ class JeuxAddController extends AbstractController
         $this->entityManager = $entityManager;
     }
 
+    #[Route('/jeux-liste', name: 'jeux.liste', methods: ['GET'])]
+    public function list(): Response
+    {
+        $jeux = $this->entityManager->getRepository(Jeux::class)->findAll();
+
+        return $this->render('jeuxliste.html.twig', [
+            'jeux' => $jeux
+        ]);
+    }
+
     #[Route('/jeux-add', name: 'jeux.add', methods: ['GET', 'POST'])]
-    public function index(
+    public function add(
         Request $request,
         EntityManagerInterface $manager
         ): Response
@@ -46,5 +56,11 @@ class JeuxAddController extends AbstractController
     public function afficherFormulaireAjoutJeu(): Response
     {
         return $this->render('jeuxadd.html.twig');
+    }
+
+    #[Route('/jeux-supp', name: 'jeux.supp', methods: ['GET', 'POST'])]
+    public function supp(): Response
+    {
+        return $this->render('jeuxsupp.html.twig');
     }
 }

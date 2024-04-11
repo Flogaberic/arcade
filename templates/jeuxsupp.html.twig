@@ -6,4 +6,16 @@
 
 <h1>Supprimer un jeu</h1>
 
+<ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{{ path('jeux.supp') }}">Supprimer</a>
+    </li>
+</ul>
+
 {% endblock %}

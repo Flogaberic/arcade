@@ -2,6 +2,7 @@ body{
     text-align: center;
     background-color: black;
     font-family: "Bungee", sans-serif;
+    color: white;
 }
 
 .jeux_box{
@@ -79,4 +80,10 @@ height: 100px;
     margin: auto;
     margin-top: 200px;
     padding: 20px;
+}
+
+.noms_cat{
+    position: absolute;
+    top: 525px;
+    left: 650px
 }
