@@ -1,0 +1,9 @@
+- Mettre une barre de vie
+- Mettre les icones à Droite 
+- Faire un ordre dans l'apparition des mobs 
+- Rajouter des augmentations 
+- Rajouter des ennemis 
+- Faire un menu
+- Faire en sorte de voir qu'on a pas assez d'argent
+- Animation sur le mob ( devient rouge ? Saute ? rapticie ? )
+- Montrer ce qu'apporte les améliorations
