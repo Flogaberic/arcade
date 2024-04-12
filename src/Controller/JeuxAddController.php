@@ -39,12 +39,18 @@ class JeuxAddController extends AbstractController
         $image = $request->request->get('image');
         $categorie = $request->request->get('categorie');
         $chemin = $request->request->get('chemin');
+        $description = $request->request->get('description');
+        $contributeur = $request->request->get('contributeur');
+        $date = $request->request->get('date');
 
         $jeu = new Jeux();
         $jeu->setNom($nom);
         $jeu->setImg($image);
         $jeu->setCategorie($categorie);
         $jeu->setChemin($chemin);
+        $jeu->setDescription($description);
+        $jeu->setContributeur($contributeur);
+        $jeu->setDate($date);
 
         $manager->persist($jeu);
         $manager->flush();

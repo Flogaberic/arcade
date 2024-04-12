@@ -63,13 +63,19 @@ class AccueilController extends AbstractController
         $categorie = $jeu ? $jeu->getCategorie() : 'Aucun jeu trouvé';
         $chemin = $jeu ? $jeu->getChemin() : 'Aucun jeu trouvé';
         $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
+        $description = $jeu ? $jeu->getDescription() : 'Aucun jeu trouvé';
+        $date = $jeu ? $jeu->getDate() : 'Aucun jeu trouvé';
+        $contributeur = $jeu ? $jeu->getContributeur() : 'Aucun jeu trouvé';
 
         return $this->render('gladnslash.html.twig', [
             'nom' => $nom,
             'chemin' => $chemin,
             'img' => $img,
             'categorie' => $categorie,
-            'highscore' => $highscore
+            'highscore' => $highscore,
+            'description' => $description,
+            'date' => $date,
+            'contributeur' => $contributeur
         ]);
     }
 
@@ -90,14 +96,26 @@ class AccueilController extends AbstractController
         $categorie = $jeu ? $jeu->getCategorie() : 'Aucun jeu trouvé';
         $chemin = $jeu ? $jeu->getChemin() : 'Aucun jeu trouvé';
         $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
+        $description = $jeu ? $jeu->getDescription() : 'Aucun jeu trouvé';
+        $date = $jeu ? $jeu->getDate() : 'Aucun jeu trouvé';
+        $contributeur = $jeu ? $jeu->getContributeur() : 'Aucun jeu trouvé';
 
         return $this->render('legendere.html.twig', [
             'nom' => $nom,
             'chemin' => $chemin,
             'img' => $img,
             'categorie' => $categorie,
-            'highscore' => $highscore
+            'highscore' => $highscore,
+            'description' => $description,
+            'date' => $date,
+            'contributeur' => $contributeur
         ]);
+    }
+
+    #[Route('/ongame3', name: 'ongame3', methods: ['GET', 'POST'])]
+    public function ongame3(): Response
+    {
+        return $this->render('ongame3.html.twig');
     }
 
     #[Route('/accueil.3', name: 'accueil3', methods: ['GET', 'POST'])]
@@ -111,13 +129,19 @@ class AccueilController extends AbstractController
         $categorie = $jeu ? $jeu->getCategorie() : 'Aucun jeu trouvé';
         $chemin = $jeu ? $jeu->getChemin() : 'Aucun jeu trouvé';
         $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
+        $description = $jeu ? $jeu->getDescription() : 'Aucun jeu trouvé';
+        $date = $jeu ? $jeu->getDate() : 'Aucun jeu trouvé';
+        $contributeur = $jeu ? $jeu->getContributeur() : 'Aucun jeu trouvé';
 
         return $this->render('pacman.html.twig', [
             'nom' => $nom,
             'chemin' => $chemin,
             'img' => $img,
             'categorie' => $categorie,
-            'highscore' => $highscore
+            'highscore' => $highscore,
+            'description' => $description,
+            'date' => $date,
+            'contributeur' => $contributeur
         ]);
     }
 }

@@ -4,39 +4,61 @@
 
 {% block body %}
 
-<h1>Ajouter un jeu</h1>
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
 
-<ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" href="{{ path('jeux.add.form') }}">Ajouter</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('jeux.supp') }}">Supprimer</a>
-    </li>
-</ul>
+<a href="{{ path('admin.home') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
 
-<form action="{{ path('jeux.add') }}" method="post">
-    <div class="mb-3">
-      <label for="nom" class="form-label">Nom</label>
-      <input type="text" class="form-control" id="nom" name="nom" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
-        <input type="text" placeholder="img/..." class="form-control" id="image" name="image">
-    </div>
-    <div class="mb-3">
-        <label for="categorie" class="form-label">Catégorie</label>
-        <input type="text" class="form-control" id="categorie" name="categorie">
-    </div>
-    <div class="mb-3">
-        <label for="chemin" class="form-label">Chemin</label>
-        <input type="text" class="form-control" id="chemin" name="chemin">
-    </div>
-    <button type="submit" class="btn btn-primary">Ajouter</button>
-</form>
+<div class="container">
+    <h1>Ajouter un jeu</h1>
 
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('jeux.add.form') }}">Ajouter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('jeux.supp') }}">Supprimer</a>
+        </li>
+    </ul>
+
+    <form action="{{ path('jeux.add') }}" method="post">
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" name="nom" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="text" placeholder="img/..." class="form-control" id="image" name="image">
+        </div>
+        <div class="mb-3">
+            <label for="categorie" class="form-label">Catégorie</label>
+            <input type="text" class="form-control" id="categorie" name="categorie">
+        </div>
+        <div class="mb-3">
+            <label for="chemin" class="form-label">Chemin</label>
+            <input type="text" class="form-control" id="chemin" name="chemin">
+        </div>
+        <div class="mb-3 row-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <div class="mb-3">
+            <label for="contributeur" class="form-label">Contributeur</label>
+            <input type="text" class="form-control" id="contributeur" name="contributeur">
+        </div>
+        <div class="mb-3">
+          <label for="animation" class="form-label">Animation</label>
+          <input type="text" class="form-control" id="animation" name="animation">
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input type="int" class="form-control" id="date" name="date">
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+</div>
 
 {% endblock %}

@@ -4,5 +4,19 @@
 
 {% block body %}
 
+<div class="element1">
+    <video autoplay muted loop>
+        <source src="vid/ANIM_CATEGORIES.mp4" type="video/mp4">
+    </video>
+</div>
+
+<a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
+
+<div class="container">
+    <h1>Plateforme</h1>
+    <div>
+        <a href="{{ path('ongame1') }}"><img src="{{ img }}" width="400px"></a>
+    </div>
+</div>
 
 {% endblock %}

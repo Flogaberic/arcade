@@ -4,26 +4,32 @@
 
 {% block body %}
 
-<h1>Supprimer un jeu</h1>
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
 
-<ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" href="{{ path('jeux.supp') }}">Supprimer</a>
-    </li>
-</ul>
+<a href="{{ path('admin.home') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
 
-<form action="{{ path('jeux.supp.action') }}" method="post">
-    <div class="mb-3">
-      <label for="nom" class="form-label">N° / Id</label>
-      <input type="text" class="form-control" id="nom" name="id" aria-describedby="emailHelp">
-    </div>
-    <button type="submit" class="btn btn-primary">Supprimer</button>
-</form>
+<div class="container">
+    <h1>Supprimer un jeu</h1>
+
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('jeux.supp') }}">Supprimer</a>
+        </li>
+    </ul>
+
+    <form action="{{ path('jeux.supp.action') }}" method="post">
+        <div class="mb-3">
+          <label for="nom" class="form-label">N° / Id</label>
+          <input type="text" class="form-control" id="nom" name="id" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Supprimer</button>
+    </form>
+</div>
 
 {% endblock %}

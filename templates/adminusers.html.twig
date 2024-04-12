@@ -1,18 +1,22 @@
 {% extends "base.html.twig" %}
 
-{% block title %} Admin-Home | {{ parent() }} {% endblock %}
+{% block title %} Utilisateurs | {{ parent() }} {% endblock %}
 
 {% block body %}
 
-<h1>Users</h1>
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
 
-<ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Jeux</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Utilisateurs</a>
-    </li>
-</ul>
+<a href="{{ path('admin.home') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
 
+<div class="container">
+    <h1>Utilisateurs</h1>
+    <ul>
+      {% for item in user %}
+          <li>{{ item.getEmail() }}</li>
+          <li>{{ item.getPassword() }}</li>
+          <li>---</li>
+      {% endfor %}
+    </ul>
+</div>
 {% endblock %}

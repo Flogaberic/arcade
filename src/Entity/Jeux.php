@@ -108,7 +108,7 @@ class Jeux
 
     public function getDescription(): ?string
     {
-        return $this-> $Description;
+        return $this->Description;
     }
 
     public function setDescription($Description): static
@@ -120,7 +120,7 @@ class Jeux
 
     public function getContributeur(): ?string
     {
-        return $this-> $Contributeur;
+        return $this->Contributeur;
     }
 
     public function setContributeur($Contributeur): static
@@ -132,7 +132,7 @@ class Jeux
 
     public function getAnimation(): ?string
     {
-        return $this-> $Animation;
+        return $this->Animation;
     }
 
     public function setAnimation($Contributeur): static

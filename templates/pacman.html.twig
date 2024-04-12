@@ -14,8 +14,10 @@
     <h1>{{ nom }}</h1>
     <h5>{{ categorie }}</h5>
     <h5>{{ highscore }}</h5>
-    <img src="{{ img }}" width="500px"><br><br>
-    <a href="{{ chemin }}"><button class="btn btn-primary">Jouer</button></a>
+    <img src="{{ img }}" width="400px"><br><br>
+    <a href="{{ path('ongame3') }}"><button class="btn btn-primary">Jouer</button></a><br>
+    <small>{{ description }}</small><br>
+    <small>{{ date }} | {{ contributeur }}</small>
 </div>
 
 {% endblock %}

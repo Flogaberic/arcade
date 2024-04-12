@@ -10,19 +10,20 @@
 
 <a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
 
+<div class="element3">
+    <a href="{{ path('emulateur') }}"><img src="img/logo_mmi_adulte_Plan_de_travail_1.png" width="100px" height="100px" class="accueil"></a>
+</div>
+
 <div class="parametres_box ">
     <h1>Paramètres</h1>
     <div class="d-flex">
         <div style="flex: 1">
-            <img src="img/sons2.png" width="30px" height="30px"><button>Couper le son</button><br>
-            <img src="img/sons1.png" width="30px" height="30px"><button>Activer le son</button><br>
-            <img src="img/coupe.png" width="30px" height="30px"><button>Trophées</button><br>
-            <img src="img/$.png" width="30px" height="30px"><button>Argent</button>
+            <img src="img/sons2.png" width="30px" height="30px"><button onclick="couperMusique()">Couper le son</button><br>
+            <img src="img/sons1.png" width="30px" height="30px"><button onclick="allumerMusique()">Activer le son</button><br>
         </div>
         <div style="flex: 1"> 
             <img src="img/musique1.png" width="30px" height="30px"><button onclick="couperMusique()">Couper la musique</button><br>
             <img src="img/musique2.png" width="30px" height="30px"><button onclick="allumerMusique()">Activer la musique</button><br>
-            <img src="img/Aide.png" width="30px" height="30px"><button>Aide</button>
         </div>
     </div>
 </div>

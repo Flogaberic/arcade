@@ -4,31 +4,52 @@
 
 {% block body %}
 
-<h1>Liste des jeux</h1>
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
+<img src="img/efee111c4fe1109a1a66708d69e20ee4.jpg" width="1280px" height="720px">
 
-<ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ path('jeux.supp') }}">Supprimer</a>
-    </li>
-</ul>
+<a href="{{ path('admin.home') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
 
-<ul>
-    {% for item in jeux %}
-        <li>{{ item.getId() }}</li>
-        <li>{{ item.getNom() }}</li>
-        <li>{{ item.getImg() }}</li>
-        <li>{{ item.getCategorie() }}</li>
-        <li>{{ item.getChemin() }}</li>
-        <li>{{ item.getHighscore() }}</li>
-    {% endfor %}
-</ul>
+<div class="container">
+  <h1>Liste des jeux</h1>
 
-<a href="{{ path('admin.home') }}"><button class="btn btn-primary">Quitter</button></a>
+  <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{ path('jeux.liste') }}">Liste</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('jeux.add.form') }}">Ajouter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('jeux.supp') }}">Supprimer</a>
+      </li>
+  </ul>
 
+  <ul>
+      <li>Id</li>
+      <li>Nom</li>
+      <li>Img</li>
+      <li>Cat.</li>
+      <li>Chemin</li>
+      <li>High-score</li>
+      <li>Contributeur</li>
+      <li>Date</li>
+      <li>---</li>
+  </ul>
+
+  <ul>
+      {% for item in jeux %}
+          <li>{{ item.getId() }}</li>
+          <li>{{ item.getNom() }}</li>
+          <li>{{ item.getImg() }}</li>
+          <li>{{ item.getCategorie() }}</li>
+          <li>{{ item.getChemin() }}</li>
+          <li>{{ item.getHighscore() }}</li>
+          <li>{{ item.getContributeur() }}</li>
+          <li>{{ item.getDate() }}</li>
+          <li>---</li>
+      {% endfor %}
+  </ul>
+
+  <a href="{{ path('admin.home') }}"><button class="btn btn-primary">Quitter</button></a>
+</div>
 {% endblock %}
