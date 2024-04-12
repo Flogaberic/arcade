@@ -47,7 +47,7 @@ class AccueilController extends AbstractController
     }
 
     #[Route('/accueil.1', name: 'accueil1', methods: ['GET', 'POST'])]
-    public function jeu(): Response
+    public function jeu1(): Response
     {
         # Remplacer l'id par le numéro du jeu
         $jeu = $this->entityManager->getRepository(Jeux::class)->findOneBy(['id' => '1']);
@@ -59,6 +59,48 @@ class AccueilController extends AbstractController
         $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
 
         return $this->render('gladnslash.html.twig', [
+            'nom' => $nom,
+            'chemin' => $chemin,
+            'img' => $img,
+            'categorie' => $categorie,
+            'highscore' => $highscore
+        ]);
+    }
+
+    #[Route('/accueil.2', name: 'accueil2', methods: ['GET', 'POST'])]
+    public function jeu2(): Response
+    {
+        # Remplacer l'id par le numéro du jeu
+        $jeu = $this->entityManager->getRepository(Jeux::class)->findOneBy(['id' => '2']);
+
+        $nom = $jeu ? $jeu->getNom() : 'Aucun jeu trouvé';
+        $img = $jeu ? $jeu->getImg() : 'Aucun jeu trouvé';
+        $categorie = $jeu ? $jeu->getCategorie() : 'Aucun jeu trouvé';
+        $chemin = $jeu ? $jeu->getChemin() : 'Aucun jeu trouvé';
+        $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
+
+        return $this->render('legendere.html.twig', [
+            'nom' => $nom,
+            'chemin' => $chemin,
+            'img' => $img,
+            'categorie' => $categorie,
+            'highscore' => $highscore
+        ]);
+    }
+
+    #[Route('/accueil.3', name: 'accueil3', methods: ['GET', 'POST'])]
+    public function jeu3(): Response
+    {
+        # Remplacer l'id par le numéro du jeu
+        $jeu = $this->entityManager->getRepository(Jeux::class)->findOneBy(['id' => '3']);
+
+        $nom = $jeu ? $jeu->getNom() : 'Aucun jeu trouvé';
+        $img = $jeu ? $jeu->getImg() : 'Aucun jeu trouvé';
+        $categorie = $jeu ? $jeu->getCategorie() : 'Aucun jeu trouvé';
+        $chemin = $jeu ? $jeu->getChemin() : 'Aucun jeu trouvé';
+        $highscore = $jeu ? $jeu->getHighscore() : 'Aucun jeu trouvé';
+
+        return $this->render('pacman.html.twig', [
             'nom' => $nom,
             'chemin' => $chemin,
             'img' => $img,

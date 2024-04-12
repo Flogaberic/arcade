@@ -4,7 +4,13 @@
 
 {% block body %}
 
-<div class="parametres_box">
+<video autoplay muted loop>
+    <source src="vid/ANIM_PAGE_REGLAGE.mp4" type="video/mp4">
+</video>
+
+<a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
+
+<div class="parametres_box ">
     <h1>Paramètres</h1>
     <div class="d-flex">
         <div style="flex: 1">
@@ -20,5 +26,4 @@
         </div>
     </div>
 </div>
-<a href="{{ path('accueil') }}"><button>Quitter</button></a>
 {% endblock %}

@@ -10,14 +10,15 @@
     </video>
 </div>
 
+<a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
+
 <div class="parametres_box">
     <h1>Catégories</h1>
     <div>
-        <h5>Couper le son</h5><br>
-        <h5>Activer le son</h5><br>
-        <h5>Trophées</h5><br>
-        <h5>Argent</h5>
+        <a href="{{ path('categories.1') }}" class=""><h5>Plateformes</h5></a><br>
+        <a href="{{ path('categories.2') }}" class=""><h5>Clicker</h5></a><br>
+        <h5>Action</h5><br>
+        <h5>Hasard</h5>
     </div>
 </div>
-<a href="{{ path('accueil') }}"><button>Quitter</button></a>
 {% endblock %}

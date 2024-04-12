@@ -71,7 +71,16 @@ height: 100px;
     left: 78.5rem;
 }
 
+.fleche{
+    position: absolute;
+    top: 3rem;
+    left: 80rem;
+}
+
 .parametres_box{
+    position: absolute;
+    top: 2rem;
+    left: 27.5rem;
     display: block;
     border: 6px solid #481B71;
     background: linear-gradient(to bottom, #E71E7B, #F6A019);
@@ -86,4 +95,26 @@ height: 100px;
     position: absolute;
     top: 525px;
     left: 680px
+}
+
+.container{
+    position: absolute;
+    top: 5.5rem;
+    left: 20.5rem;
+    background-color: #D3DAE8;
+    color: black;
+    border-radius: 20px;
+    width: 800px;
+    padding: 30px;
+}
+
+.presentation{
+    position: absolute;
+    top: 5.5rem;
+    left: 20.5rem;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 20px;
+    width: 800px;
+    padding: 30px;
 }

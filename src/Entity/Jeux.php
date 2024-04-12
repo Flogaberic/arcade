@@ -29,6 +29,18 @@ class Jeux
     #[ORM\Column(nullable: true)]
     private ?int $Highscore = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $Description = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Contributeur = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Animation = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $Date = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +102,54 @@ class Jeux
     public function setHighscore(?int $Highscore): static
     {
         $this->Highscore = $Highscore;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this-> $Description;
+    }
+
+    public function setDescription($Description): static
+    {
+        $this->Description = $Description;
+
+        return $this;
+    }
+
+    public function getContributeur(): ?string
+    {
+        return $this-> $Contributeur;
+    }
+
+    public function setContributeur($Contributeur): static
+    {
+        $this->Contributeur = $Contributeur;
+
+        return $this;
+    }
+
+    public function getAnimation(): ?string
+    {
+        return $this-> $Animation;
+    }
+
+    public function setAnimation($Contributeur): static
+    {
+        $this->Animation = $Animation;
+
+        return $this;
+    }
+
+    public function getDate(): ?int
+    {
+        return $this->Date;
+    }
+
+    public function setDate(?int $Date): static
+    {
+        $this->Date = $Date;
 
         return $this;
     }

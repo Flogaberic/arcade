@@ -18,12 +18,12 @@ class CategorieController extends AbstractController
     #[Route('/categories.1', name: 'categories.1', methods: ['GET', 'POST'])]
     public function categorie1(): Response
     {
-        return $this->render('categories1.html.twig');
+        return $this->render('plateformes.html.twig');
     }
 
     #[Route('/categories.2', name: 'categories.2', methods: ['GET', 'POST'])]
     public function categorie2(): Response
     {
-        return $this->render('categories2.html.twig');
+        return $this->render('clickers.html.twig');
     }
 }
