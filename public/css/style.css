@@ -5,6 +5,10 @@ body{
     color: white;
 }
 
+a{
+    text-decoration: none;
+}
+
 .jeux_box{
     border-style: solid;
     border-radius: 20px;

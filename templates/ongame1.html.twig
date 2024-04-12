@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Gladnslash | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
+
+<iframe
+    id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="1200"
+    height="800"
+    src="https://n59fjp.csb.app/">
+</iframe>
+
+{% endblock %}

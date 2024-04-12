@@ -46,6 +46,12 @@ class AccueilController extends AbstractController
         ]);
     }
 
+    #[Route('/ongame1', name: 'ongame1', methods: ['GET', 'POST'])]
+    public function ongam1(): Response
+    {
+        return $this->render('ongame1.html.twig');
+    }
+
     #[Route('/accueil.1', name: 'accueil1', methods: ['GET', 'POST'])]
     public function jeu1(): Response
     {
@@ -65,6 +71,12 @@ class AccueilController extends AbstractController
             'categorie' => $categorie,
             'highscore' => $highscore
         ]);
+    }
+
+    #[Route('/ongame2', name: 'ongame2', methods: ['GET', 'POST'])]
+    public function ongame2(): Response
+    {
+        return $this->render('ongame2.html.twig');
     }
 
     #[Route('/accueil.2', name: 'accueil2', methods: ['GET', 'POST'])]

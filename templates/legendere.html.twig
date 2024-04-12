@@ -4,12 +4,14 @@
 
 {% block body %}
 
+<a href="{{ path('accueil') }}"><img src="img/fleche.png" class="fleche" width="70px"></a>
+
 <div class="presentation">
     <h1>{{ nom }}</h1>
     <h5>{{ categorie }}</h5>
     <h5>{{ highscore }}</h5>
     <img src="{{ img }}" width="500px"><br>
-    <a href="{{ chemin }}"><button class="btn btn-primary">Jouer</button></a>
+    <a href="{{ path('ongame2') }}"><button class="btn btn-primary">Jouer</button></a>
 </div>
 
 {% endblock %}
